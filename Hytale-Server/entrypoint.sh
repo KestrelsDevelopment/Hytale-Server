@@ -11,4 +11,9 @@ wget https://downloader.hytale.com/hytale-downloader.zip && \
 ./hytale-downloader/hytale-downloader-linux-amd64 && \
     unzip ./*.zip -d /opt/hytale-server
 
+if ! [ -d /opt/hytale-server-data ]; then
+    mkdir /opt/hytale-server-data
+fi
+cd /opt/hytale-server-data
+
 exec java -jar /opt/hytale-server/Server/HytaleServer.jar --assets /opt/hytale-server/Assets.zip
