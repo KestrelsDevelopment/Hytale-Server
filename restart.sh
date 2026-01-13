@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
 
 docker compose down
-docker compose up
+docker compose up -d
 docker attach hytale-server
