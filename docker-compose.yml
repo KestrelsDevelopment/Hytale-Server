@@ -1,5 +1,9 @@
 services:
   hytale-server:
+    # Uncomment to build locally
+    # build:
+    #   context: ./Hytale-Server
+    #   dockerfile: ./Dockerfile
     container_name: hytale-server
     image: ghcr.io/kestrelsdevelopment/hytale-server:latest
     volumes:
@@ -8,8 +12,8 @@ services:
     ports:
       - 5520:5520/udp
     environment:
-      - JDK_JAVA_OPTIONS:${HYTALE_JVM_OPTIONS}
-      - SERVER_ARGS:${HYTALE_SERVER_ARGS}
+      JDK_JAVA_OPTIONS: ${HYTALE_JVM_OPTIONS}
+      SERVER_ARGS: ${HYTALE_SERVER_ARGS}
     restart: unless-stopped
     stdin_open: true
     tty: true
