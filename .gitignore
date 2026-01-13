@@ -1,0 +1,6 @@
+.vs/
+.idea/
+obj/
+bin/
+
+hytale-server-data

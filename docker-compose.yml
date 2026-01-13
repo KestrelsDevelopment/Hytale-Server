@@ -1,0 +1,14 @@
+services:
+  hytale-server:
+    image: ghcr.io/kestrelsdevelopment/hytale-server
+    build:
+      context: ./Hytale-Server
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./hytale-server-data:/opt/hytale-server
+    ports:
+      - 5520:5520
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    user: root
