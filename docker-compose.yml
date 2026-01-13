@@ -1,10 +1,7 @@
 services:
   hytale-server:
     container_name: hytale-server
-    image: ghcr.io/kestrelsdevelopment/hytale-server
-    build:
-      context: ./Hytale-Server
-      dockerfile: ./Dockerfile
+    image: ghcr.io/kestrelsdevelopment/hytale-server:latest
     volumes:
       - ${HYTALE_DATA_DIR}:/opt/hytale-server-data
       - hytale-server:/opt/hytale-server

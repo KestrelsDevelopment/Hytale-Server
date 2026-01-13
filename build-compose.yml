@@ -1,0 +1,6 @@
+services:
+  kestrelsdev.hytale-server:
+    image: ghcr.io/kestrelsdevelopment/hytale-server
+    build:
+      context: ./Hytale-Server
+      dockerfile: ./Dockerfile
