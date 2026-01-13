@@ -4,6 +4,8 @@ if ! [ -d /opt/hytale-server-data ]; then
     mkdir /opt/hytale-server-data
 fi
 
+export JDL_JAVA_OPTIONS=JVM_OPTIONS
+
 if [ -d /opt/hytale-server ] && [ -n "$(ls -A /opt/hytale-server)" ]; then
     cd /opt/hytale-server-data
     exec java -jar /opt/hytale-server/Server/HytaleServer.jar --assets /opt/hytale-server/Assets.zip
