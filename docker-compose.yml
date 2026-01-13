@@ -5,9 +5,9 @@ services:
       context: ./Hytale-Server
       dockerfile: ./Dockerfile
     volumes:
-      - ./hytale-server-data:/opt/hytale-server
+      - ${HYTALE_DATA_DIR}:/opt/hytale-server
     ports:
-      - 5520:5520
+      - ${HYTALE_SERVER_PORT}:5520
     restart: unless-stopped
     stdin_open: true
     tty: true
